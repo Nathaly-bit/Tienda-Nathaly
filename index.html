@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tienda de Nathaly | Feria Navideña Noche de Estrellas</title>
+  <meta name="description" content="Tienda de Nathaly - Tocopilla, Chile. Feria Navideña Noche de Estrellas. Pedido por WhatsApp + pagos con tarjeta, transferencia y PayPal." />
+
+  <style>
+    :root{
+      --bg:#0b0f1a;
+      --text:#e9eefb;
+      --muted:#97a3b6;
+      --brand:#6ae4ff;
+      --brand2:#8b5cf6;
+      --line:rgba(255,255,255,.10);
+      --radius:18px;
+      --shadow:0 18px 60px rgba(0,0,0,.45);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(1200px 700px at 20% 0%, rgba(139,92,246,.25), transparent 55%),
+        radial-gradient(1000px 600px at 90% 10%, rgba(106,228,255,.20), transparent 55%),
+        var(--bg);
+      color:var(--text);
+    }
+    a{text-decoration:none;color:inherit}
+    .topbar{
+      position:sticky;top:0;z-index:10;
+      backdrop-filter: blur(10px);
+      background: rgba(11,15,26,.72);
+      border-bottom:1px solid var(--line);
+    }
+    .topbar-inner{
+      max-width:1100px;margin:auto;
+      display:flex;justify-content:space-between;align-items:center;
+      padding:14px 18px;gap:12px;
+    }
+    .brand{display:flex;gap:10px;align-items:center;font-weight:900}
+    .logo{
+      width:36px;height:36px;border-radius:12px;
+      background:linear-gradient(135deg,var(--brand2),var(--brand));
+    }
+    .btn{
+      padding:10px 14px;border-radius:14px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.06);
+      color:var(--text);
+      cursor:pointer;font-weight:700;
+    }
+    .btn-primary{
+      background:linear-gradient(135deg,var(--brand2),var(--brand));
+      border:none;color:#06101a;
+    }
+    header{
+      max-width:1100px;margin:auto;padding:24px 18px;
+      display:grid;grid-template-columns:1.2fr .8fr;gap:18px;
+    }
+    @media(max-width:900px){header{grid-template-columns:1fr}}
+    .card{
+      background:rgba(255,255,255,.05);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow:var(--shadow);
+    }
+    .pill{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.08);
+      font-size:12px;
+      margin-right:6px;
+      margin-top:6px;
+    }
+    .grid{
+      max-width:1100px;margin:auto;
+      padding:18px;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+    }
+    @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:520px){.grid{grid-template-columns:1fr}}
+    .product{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:rgba(255,255,255,.05);
+      padding:16px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .price{font-weight:900}
+    footer{
+      max-width:1100px;margin:auto;
+      padding:20px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      text-align:center;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- TOP -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="logo"></div>
+      <div>
+        <div>Tienda de Nathaly</div>
+        <div style="font-size:12px;color:var(--muted)">Feria Navideña · Noche de Estrellas · Tocopilla</div>
+      </div>
+    </div>
+    <a href="#contacto" class="btn btn-primary">WhatsApp</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<header>
+  <div class="card">
+    <h1>Tienda de Nathaly 🎄</h1>
+    <p style="color:var(--muted)">
+      Feria Navideña <b>“Noche de Estrellas”</b> ✨<br>
+      Emprendimiento local desde <b>Tocopilla, Chile</b>.
+    </p>
+
+    <div>
+      <span class="pill">💳 Crédito / Débito</span>
+      <span class="pill">💵 Transferencia</span>
+      <span class="pill">🌐 PayPal</span>
+      <span class="pill">📱 WhatsApp</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <b>¿Cómo comprar?</b>
+    <p style="color:var(--muted)">
+      1️⃣ Elige tus productos<br>
+      2️⃣ Escríbenos por WhatsApp<br>
+      3️⃣ Coordinamos pago y entrega<br><br>
+      <b>Métodos de pago:</b><br>
+      💳 Tarjeta crédito / débito<br>
+      💵 Transferencia bancaria<br>
+      🌐 PayPal<br>
+    </p>
+  </div>
+</header>
+
+<!-- PRODUCTOS -->
+<section class="grid">
+  <div class="product">
+    <b>Brownie</b>
+    <span class="price">$2.500</span>
+    <button class="btn btn-primary" onclick="add('Brownie',2500)">Agregar</button>
+  </div>
+
+  <div class="product">
+    <b>Galletas Navideñas</b>
+    <span class="price">$3.500</span>
+    <button class="btn btn-primary" onclick="add('Galletas Navideñas',3500)">Agregar</button>
+  </div>
+
+  <div class="product">
+    <b>Empanaditas (docena)</b>
+    <span class="price">$6.000</span>
+    <button class="btn btn-primary" onclick="add('Empanaditas',6000)">Agregar</button>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="card" style="max-width:1100px;margin:18px auto;">
+  <h2>Pedido por WhatsApp 📱</h2>
+  <p style="color:var(--muted)">
+    Aceptamos pedidos por WhatsApp y coordinamos el medio de pago:
+    <br>💳 Tarjeta crédito / débito
+    <br>💵 Transferencia
+    <br>🌐 PayPal
+  </p>
+  <a id="waLink" class="btn btn-primary" target="_blank">Enviar pedido por WhatsApp</a>
+</section>
+
+<footer>
+  © <span id="year"></span> Tienda de Nathaly · Tocopilla, Chile
+</footer>
+
+<script>
+  const WHATSAPP_NUMBER = "56950890261";
+  let cart = [];
+
+  function add(name, price){
+    cart.push({name,price});
+    alert(name + " agregado al pedido");
+  }
+
+  function sendWhatsApp(){
+    let total = 0;
+    let msg = "Hola! 👋 Quiero hacer un pedido en *Tienda de Nathaly*%0A";
+    msg += "Feria Navideña Noche de Estrellas · Tocopilla%0A%0A";
+    cart.forEach(p=>{
+      total += p.price;
+      msg += "- " + p.name + " $" + p.price + "%0A";
+    });
+    msg += "%0ATotal: $" + total + "%0A%0A";
+    msg += "Métodos de pago:%0A• Crédito/Débito%0A• Transferencia%0A• PayPal";
+    window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+msg,"_blank");
+  }
+
+  document.getElementById("waLink").onclick = sendWhatsApp;
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
